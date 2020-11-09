@@ -1,0 +1,27 @@
+{
+  "name": "ikoala",
+  "version": "1.0.0",
+  "description": "just a app!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comeriven/ikoala.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/comeriven/ikoala/issues"
+  },
+  "homepage": "https://github.com/comeriven/ikoala#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "koa": "^2.13.0",
+    "koa-router": "^10.0.0"
+  }
+}
