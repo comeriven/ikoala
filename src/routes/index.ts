@@ -6,4 +6,8 @@ router.get('/', async ctx => {
   ctx.body = 'hello world!'
 })
 
+router.get('/user', async ctx => {
+  ctx.body = 'hello user!'
+})
+
 export default router
