@@ -2,10 +2,10 @@
   "name": "ikoala",
   "version": "1.0.0",
   "description": "just a app!",
-  "main": "app.js",
+  "main": "www.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon dist/app.js",
+    "start": "nodemon dist/bin/www.js",
     "build": "tsc"
   },
   "repository": {
