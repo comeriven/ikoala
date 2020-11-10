@@ -1,16 +1,28 @@
 import * as Router from 'koa-router'
-import userController from '../controller/user'
+import directoryRouter from 'koa-directory-router'
+import * as path from 'path'
 
-const router = new Router()
+// import userController from '../controller/user'
 
-router.get('/', async ctx => {
-  ctx.body = 'hello world!'
-})
+const koaRouter = (app: any) => {
+  // const router = new Router()
+  const user = directoryRouter({
+    root: path.resolve(__dirname, path.normalize('../controller/user')),
+    suffix: '.ts',
+    prefix: '/user'
+  })
+  // router.get('/', async ctx => {
+  //   ctx.body = 'hello world!'
+  // })
 
-router.get('/user', async ctx => {
-  ctx.body = 'hello user!'
-})
+  app.use(user.routes())
+    .use(user.allowedMethods())
+  
+  // router.post('/user/login', userController.login)
+  // app.use(router.routes())
+  //   .use(router.allowedMethods())
 
-router.post('/user/login', userController.login)
+  return app
+}
 
-export default router
+export default koaRouter
